@@ -1,240 +1,74 @@
-body{
-  font-family: 'Raleway', sans-serif; /* Test for this*/
-  margin: 0;
-  padding: 0;
-  font-size: 16pt; /* test for this! Make all sizes em or rem */
-  background-image: url('../images/concrete_seamless.png');
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/logo_icon.png"/>
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200&display=swap" rel="stylesheet">
+    <title>Super Slick Co.</title>
+  </head>
+  <body>
+    <a class = "skip" href="#skip">Skip to Main Content</a>
+    <header>
+      <img src="images/logo.png" alt="logo for super slick with animation" id = "logo">
+      <nav>
+        <ul class="nav_links">
+          <li class="nav_item"><a href="#skip">About</a></li>
+          <li class="nav_item"><a href="#pricing">Pricing</a></li>
+          <li class="nav_item"><a href="#gallery">Gallery</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main class="about" id="skip">
+    <h1>Super Slick Co.</h1>
+    <p>We're Super Slick Co. and we like to make all your stuff look like a million bucks. How? Through the power of creativity and trendiness! We sell out so you don't have to.</p>
 
-h1{
-  font-size: 2em;
-  text-align: center;
-  line-height: 2;
-}
+    <h2 id = "pricing">Pricing</h2>
+      <div class="pricing">
+        <div class="card">
+          <header><h3>$20</h3></header>
+          <ul>
+            <li>"Pretty Cool" package</li>
+            <li>Your customers will dig it!</li>
+            <li>50 colors to pick from</li>
+          </ul>
+          <button>Buy</button>
+        </div>
+        <div class="card card_big">
+          <header><h3>$35</h3></header>
+          <ul>
+            <li>"Very Cool" package</li>
+            <li>Your customers will be so hyped for your product!</li>
+            <li>150 colors and patterns to pick from</li>
+          </ul>
+          <button>Buy</button>
+        </div>
+        <div class="card">
+          <header><h3>$50</h3></header>
+          <ul>
+            <li>"Ultra Cool" package</li>
+            <li>You will be setting the trends!</li>
+            <li>500 colors and patterns to pick from</li>
+          </ul>
+          <button>Buy</button>
+        </div>
+      </div>
 
-h2{
-  font-size: 1.5em;
-  text-align: center;
-  padding: 5px;
-}
+      <h2 id = "gallery">Gallery</h2>
+        <div class="gallery"> 
+          <img id="image1" src="images/sample.jpg" alt="image of chalk board with cool written" />
+          <img id="image2" src="images/sample.jpg" alt="image of chalk board with cool written" />
+          <img id="image3" src="images/sample.jpg" alt="image of chalk board with cool written" />
+          <img id="image4" src="images/sample.jpg" alt="image of chalk board with cool written" />
+          <img id="image5" src="images/sample.jpg" alt="image of chalk board with cool written" />
+        </div>
+      </main>
 
-p {
-  padding: 0 30px;
-}
-
-a.skip{
-  background: white;
-  left: 0;
-  padding: 6px;
-  position: absolute;
-  top: -40px;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  z-index: 1;
-}
-
-a.skip:focus{
-  top:20px;
-  color: black;
-  text-decoration-style: solid;
-}
-
-*:focus{
-  border: 2px solid black;
-}
-
-footer{
-  background-color: black;
-  color: white;
-  padding: 30px;
-  text-align: center;
-}
-
-/*
-Keyframes for animation*/
-
-@-webkit-keyframes logo_wiggle{
-  from{
-    width: 20px;
-  }
-
-  to{ 
-    width: 419px;
-  }
-}
-@keyframes logo_wiggle{
-  from{
-    width: 25px;
-  }
-  to{ 
-    width: 420px;
-  } 
-
-}
-#logo{
-  -webkit-animation-name: logo_wiggle;
-    animation-name: logo_wiggle;
-  -webkit-animation-duration: 3s;
-    animation-duration: 3s;
-  -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-}
-
-/* Cards! */
-.pricing{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  min-height: 500px;
-  
-}
-
-.card {
-  flex-basis: 400px;
-  margin: 12px;
-  background: #fff;
-  border-radius: 7px;
-  padding: 0 0 50px 0;
-}
-
-.card > header{
-  background: #288080;
-  border: 2px solid #45ADAD;
-  padding: 20px 0;
-  border-radius: 7px 7px 0 0;
-}
-
-.card > ul{
-  list-style: none;
-  padding: 0;
-}
-
-.card > ul li {
-  width: 90%;
-  margin: 20px auto;
-}
-
-.card button{
-  width: 90%;
-  height: 40px;
-  border: 0;
-  margin-left: 12px;
-  border-radius: 7px;
-  background: #288080;
-  color: white;
-  font-size: 1em;
-}
-
-.card h3{
-  font-size: 4em;
-  color: white;
-  text-align: center;
-}
-
-.card_big{
-  -webkit-transform: initial;
-          transform: initial;
-}
-
-/* Gallery! */
-
-.gallery{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  min-height: 600px;
-}
-
-.gallery > img{
-  border: 10px #50C7C7 solid;
-  margin: 10px;
-  width: 300px;
-}
-
-/* Navbar */
-header{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  border-bottom: 3px solid #50C7C7;
-}
-
-.nav_links{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-}
-
-.nav_item a{
-  color: black;
-  text-decoration: none;
-}
-
-.nav_item a:hover, a:focus{
-  color: #50C7C7;
-  text-decoration: underline;
-  -webkit-text-decoration-style: dotted;
-          text-decoration-style: dotted;
-}
-
-@media screen and (min-width: 850px){
-
-  /* Cards! */
-  .card{
-    flex-basis: 250px;
-  }
-
-  .card_big{
-    -webkit-transform: scaleX(1.12);
-            transform: scaleX(1.12);
-  }
-
-  /* Navbar */
-
-  header{
-    flex-direction: row;
-    
-  }
-
-  .nav_links{
-    flex-direction: row;
-  }
-
-  .nav_item a{
-    padding: 10px;
-  }
-}
-
-@media print { 
-  body{
-    background-image: none;
-  }
-  .pricing{
-    align-items: flex-start;
-  }
-  h2{
-    display:none;
-  }
-  .gallery{
-    display: none;
-  }
-  .card {
-    flex-basis: 200px;
-  }
-
-}
-
-@media screen and (prefers-reduced-motion: reduce){
-  
-  #logo{
-    -webkit-animation: none;
-    animation: none;
-  }
-
-}
-
+    <footer>
+      <p>University of Michigan School of Information <br/>
+        &copy; Colleen van Lent, Drew Asselin - Web Design 2019-2020</p>
+    </footer>
+  </body>
+</html>
