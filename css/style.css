@@ -91,6 +91,7 @@ Keyframes for animation*/
 }
 
 .card {
+  flex-basis: 400px;
   margin: 12px;
   background: #fff;
   border-radius: 7px;
@@ -210,11 +211,10 @@ header{
 }
 
 @media print { 
-  .body{
-    background-image: none; 
+  body{
+    background-image: none;
   }
   .pricing{
-    display: flex;
     align-items: flex-start;
   }
   h2{
