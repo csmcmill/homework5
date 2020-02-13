@@ -55,11 +55,11 @@ Keyframes for animation*/
 
 @-webkit-keyframes logo_wiggle{
   from{
-    width: 20px;
+    width: 25px;
   }
 
   to{ 
-    width: 419px;
+    width: 420px;
   }
 }
 @keyframes logo_wiggle{
